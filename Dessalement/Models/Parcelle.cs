@@ -10,6 +10,7 @@ namespace Dessalement.Models
         public float superficiebrute { get; set; }
         public float superficienette { get; set; }
         public int allocation { get; set; }
+        public int UsagerId { get; set; }   
         public Usager? usager { get; set; }
         
     }
