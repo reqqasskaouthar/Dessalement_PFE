@@ -85,13 +85,13 @@ namespace Dessalement.Controllers
             {
                 return NotFound();
             }
-            var parcelle = await this.dbContext.usagers.FindAsync(codeparcelle);
+            var parcelle = await this.dbContext.parcelles.FindAsync(codeparcelle);
 
             if (parcelle == null)
             {
                 return NotFound();
             }
-            this.dbContext.usagers.Remove(parcelle);
+            this.dbContext.parcelles.Remove(parcelle);
             await this.dbContext.SaveChangesAsync();
 
             return Ok();
